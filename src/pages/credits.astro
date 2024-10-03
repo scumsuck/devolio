@@ -1,0 +1,36 @@
+---
+import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+import Prose from '../components/Prose.astro';
+import { projects } from './directory/directory';
+
+
+type BlogPost = CollectionEntry<'blog'>;
+
+const top6Projects = projects.slice(0, 6);
+const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+---
+
+<BaseLayout title={'Credits' + ' - ' + SITE_TITLE} description={SITE_DESCRIPTION}>
+	<div class='container'>
+		<div class='w-full gap-16 mb-10'>
+      <div class="text-pretty leading-9">
+        <h1>Credits</h1>
+        <Prose>
+          <div class="text-lg">
+
+            <div style="position:relative;width:100%;padding-top: 56.25%;"><iframe style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" title="Embedded YouTube video" src="https://www.youtube.com/embed/UYL7JtyxDJ8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p>This site was built with the <a href="https://github.com/devaradise/devolio">Devolio Template</a>, in VSCodium.</p>
+            <p>I literally have no idea what I’m doing, this site is literally just me learning how to use Astro.</p>
+          </div>
+        </Prose>
+      </div>
+		</div>
+		<main>
+
+      </div>
+		</main>
+	</div>
+</BaseLayout>

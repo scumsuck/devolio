@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Prose from '../components/Prose.astro';
+
+---
+
+<BaseLayout
+	title="Join MYLK"
+	description="How to submit your site to MYLK"
+>
+  <div class='container'>
+		<main class='prose text-lg dark:prose-invert'>
+      <article>
+        <div class='w-full md:flex md:items-center gap-16 mb-10'>
+          <div class="text-pretty leading-9">
+            <h1>Join mylk </h1>
+            <Prose>
+              <div class="text-lg">
+                <h2>Da rules:</h2>
+                <ul>
+                <li>I can ignore submissions from annoying people.  Annoying people include MAGAs, gender criticals, (un)ironic varg fanboys, and anti/proship discoursers.</li>
+                <li>You must acknowledge 👆 RPF.  You don’t have to like it.  You don’t have to create it.  You just have to not be a dick to people who happen to create fanart and fanfic about musicians.</li>
+                <li>No gatekeeping.  Everyone is welcome no matter what genres they like.</li>
+                <li>I know 80% of celebrities are jackasses, and that applies to rock music too.  You can like the music and think the musician is a total jackass.  If you’re like, a fan of Megadeth I’m not gonna automatically assume you share all of Dave Mustaine’s IRL views.  If you like The Beatles, I’m not gonna assume you like beating your wife.  If your page is full of like intentionally labelled nazi black metal or some shit, in which the music and lyrics are meant to be propaganda, I’m probably ignoring you though.</li>
+                </ul>
+                <p>If you don’t like these guidelines, that’s fine.  Make your own web listing!  It’s free!</p>
+
+                <h2>Forms:</h2>
+                <p><button>Fill out this form for the general directory</button></p>
+                <p><button>Fill out this form for artists/writers with OCs</button></p>
+                
+              </div>
+            </Prose>
+          </div>
+        </div>     
+      
+        </article>
+      </article>
+    </main>
+  </div>
+</BaseLayout>
