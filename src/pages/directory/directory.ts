@@ -1,5 +1,3 @@
-import { getRepositoryDetails } from "../../utils";
-
 export interface Project {
   icon: string;
   name: string;
@@ -35,6 +33,7 @@ export const projects: Project[] = [
     tags: ['Boomer Rock']
   },
   {
+    icon: 'https://static.wikia.nocookie.net/starwars/images/4/43/TheChild-Fathead.png/revision/latest?cb=20201031231040',
     name: 'Lask',
   description: 'Grogu stan',
   demoLink: 'https://target.com',
